@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-dcure-dark text-white font-sans;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-dcure-navy/50 backdrop-blur-md border border-dcure-blue/20 rounded-2xl;
+  }
+  .glass-card-hover {
+    @apply transition-all duration-300 hover:border-dcure-cyan/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.15)];
+  }
+  .glow-text {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-dcure-dark;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dcure-navy border border-dcure-blue/20 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dcure-blue/50;
+  }
+}
