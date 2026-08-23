@@ -52,13 +52,7 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:block shrink-0 ml-8">
-          <a href="#demo" className="bg-[#D71920] text-white font-semibold px-[24px] py-[10px] rounded-full shadow-[0_0_20px_rgba(215,25,32,0.4)] flex items-center gap-1.5 transition-all hover:shadow-[0_0_25px_rgba(215,25,32,0.6)] hover:-translate-y-0.5">
-            EXPLORE PLATFORM
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-          </a>
-        </div>
+        
 
         {/* Mobile Toggle */}
         <button className="lg:hidden text-dcure-navy p-1" onClick={() => setIsOpen(!isOpen)}>

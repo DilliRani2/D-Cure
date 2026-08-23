@@ -22,7 +22,7 @@ export const Device = () => {
   ];
 
   return (
-    <section id="device" className="py-12 bg-transparent relative">
+    <section id="device" className="py-6 bg-transparent relative">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10 xl:gap-12">
 

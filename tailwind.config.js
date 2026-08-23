@@ -15,7 +15,7 @@ export default {
         'ice-blue': '#EAF3FF',
         // Keep legacy colors mapped to the new ones or similar to avoid completely breaking things while transitioning
         'dcure-navy': '#0c2a5eff',
-        'dcure-red': '#770e11ff',
+        'dcure-red': '#6b0f12ff',
         'dcure-cyan': '#09345fff',
       },
       fontFamily: {

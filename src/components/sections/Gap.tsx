@@ -22,9 +22,9 @@ export const Gap = () => {
   ];
 
   return (
-    <section id="gap" className="py-24 relative overflow-hidden">
+    <section id="gap" className="py-6 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-8">
           <div className="inline-block px-4 py-2 glass-panel text-ice-blue text-sm font-bold tracking-wider mb-4 uppercase rounded-full">
             The Gap
           </div>

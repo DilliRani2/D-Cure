@@ -42,7 +42,7 @@ export const Problem = () => {
       <div className="container mx-auto px-4 md:px-8 xl:px-12 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-10">
           <div className="inline-block px-6 py-2 border border-white text-white text-sm font-bold tracking-wider mb-6 rounded-full uppercase bg-midnight">
             THE PROBLEM: The Caregiver Gap
           </div>

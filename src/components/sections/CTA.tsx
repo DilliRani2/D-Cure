@@ -6,7 +6,7 @@ export const CTA = () => {
   return (
     <div id="cta">
       {/* Team Section (Simplified) */}
-      <section className="py-24 bg-dcure-navy">
+      <section className="py-6 bg-dcure-navy">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}

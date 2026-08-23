@@ -67,7 +67,7 @@ export const InsideDCure = () => {
   ];
 
   return (
-    <section id="hardware" className="py-12 relative overflow-hidden bg-transparent">
+    <section id="hardware" className="py-6 relative overflow-hidden bg-transparent">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
 
         <div className="text-center max-w-4xl mx-auto mb-12">

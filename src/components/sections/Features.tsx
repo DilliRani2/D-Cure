@@ -31,9 +31,9 @@ export const Features = () => {
   ];
 
   return (
-    <section className="py-24 bg-transparent relative">
+    <section className="py-6 bg-transparent relative">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

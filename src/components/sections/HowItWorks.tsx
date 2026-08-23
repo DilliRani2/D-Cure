@@ -11,9 +11,9 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-transparent relative">
+    <section id="how-it-works" className="py-6 bg-transparent relative">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

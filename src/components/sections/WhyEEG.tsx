@@ -19,7 +19,7 @@ export const WhyEEG = () => {
   ];
 
   return (
-    <section id="why-eeg" className="py-12 relative overflow-hidden bg-transparent">
+    <section id="why-eeg" className="py-6 relative overflow-hidden bg-transparent">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
 

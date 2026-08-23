@@ -27,10 +27,10 @@ export const Technology = () => {
   ];
 
   return (
-    <section id="pipeline" className="py-24 relative overflow-hidden bg-transparent">
+    <section id="pipeline" className="py-6 relative overflow-hidden bg-transparent">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
 
-        <div className="text-center max-w-4xl mx-auto mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-10">
           <div className="inline-block px-4 py-2 bg-electric/10 border border-electric/30 text-ice-blue text-sm font-bold tracking-wider mb-6 rounded-full uppercase">
             Device → Edge → Cloud Pipeline
           </div>

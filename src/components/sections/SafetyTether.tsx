@@ -4,7 +4,7 @@ import { ShieldCheck, Link2 } from 'lucide-react';
 
 export const SafetyTether = () => {
   return (
-    <section id="safety-tether" className="py-12 relative overflow-hidden bg-transparent">
+    <section id="safety-tether" className="py-6 relative overflow-hidden bg-transparent">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

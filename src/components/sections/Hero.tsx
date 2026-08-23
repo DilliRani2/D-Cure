@@ -44,10 +44,8 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href="#demo" className="bg-[#D71920] text-white font-bold px-8 py-3.5 rounded-full shadow-[0_0_20px_rgba(215,25,32,0.4)] flex justify-center items-center gap-2 transition-all hover:shadow-[0_0_25px_rgba(215,25,32,0.6)] hover:-translate-y-0.5">
-                Explore Platform
-              </a>
-              <a href="#solution" className="glass-panel text-white font-bold px-8 py-3.5 rounded-full flex justify-center items-center gap-2 transition-all hover:border-electric">
+
+              <a href="#solution" className="bg-[#6b0f12ff] hover:bg-[#8f1418ff] text-white font-bold px-8 py-3.5 rounded-full flex justify-center items-center gap-2 transition-all shadow-lg">
                 See How It Works
               </a>
             </div>
