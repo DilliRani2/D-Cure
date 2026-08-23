@@ -1,119 +1,102 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Target, DollarSign, Milestone } from 'lucide-react';
+import { Globe, Users, Store } from 'lucide-react';
 
 export const Business = () => {
   return (
-    <div id="business">
-      {/* Market & Impact */}
-      <section className="py-24 bg-dcure-navy">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold mb-6 text-white"
-            >
-              Market & <span className="text-dcure-cyan">Impact</span>
-            </motion.h2>
-            <p className="text-gray-400 text-lg">Positioning D-CURE for sustainable growth and profound social good.</p>
-          </div>
+    <section id="market" className="py-24 relative overflow-hidden bg-transparent">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <div className="glass-card p-8 border-t-2 border-t-dcure-cyan">
-              <div className="flex items-center gap-3 mb-6">
-                <Target className="text-dcure-cyan" size={28} />
-                <h3 className="text-2xl font-bold text-white">Target Market</h3>
-              </div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                India needs affordable, proactive dementia care. Recent national estimates range from <strong className="text-white">3.9 to 8.8 Million</strong> people, demonstrating the scale of the unmet need.
-              </p>
-              <h4 className="text-white font-bold mb-3">Beneficiary Segments:</h4>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2 text-sm text-gray-300"><div className="w-1.5 h-1.5 rounded-full bg-dcure-cyan"></div> Families caring for dementia patients at home</li>
-                <li className="flex items-center gap-2 text-sm text-gray-300"><div className="w-1.5 h-1.5 rounded-full bg-dcure-cyan"></div> Memory clinics & hospitals</li>
-                <li className="flex items-center gap-2 text-sm text-gray-300"><div className="w-1.5 h-1.5 rounded-full bg-dcure-cyan"></div> Insurance / Eldercare platforms</li>
-              </ul>
-            </div>
-
-            <div className="glass-card p-8 border-t-2 border-t-dcure-blue">
-              <div className="flex items-center gap-3 mb-6">
-                <TrendingUp className="text-dcure-blue" size={28} />
-                <h3 className="text-2xl font-bold text-white">Cost Structure</h3>
-              </div>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                India-first low-cost architecture designed for scale and accessibility.
-              </p>
-              <div className="bg-dcure-dark rounded-xl p-4 flex items-center justify-between border border-dcure-blue/20">
-                <span className="text-white font-semibold">Prototype</span>
-                <span className="text-dcure-cyan font-bold">~₹18,000 / unit</span>
-              </div>
-              <div className="bg-dcure-dark rounded-xl p-4 flex items-center justify-between border border-dcure-blue/20 mt-3">
-                <span className="text-white font-semibold">Scaled Hardware (1000+ Units)</span>
-                <span className="text-dcure-cyan font-bold">~₹1,500 - 2,500 / unit</span>
-              </div>
-              <div className="bg-dcure-dark rounded-xl p-4 flex items-center justify-between border border-dcure-blue/20 mt-3">
-                <span className="text-white font-semibold">Future Device Price</span>
-                <span className="text-dcure-cyan font-bold">₹3,000 - 5,000 / unit</span>
-              </div>
-              <div className="bg-dcure-dark rounded-xl p-4 flex items-center justify-between border border-dcure-blue/20 mt-3">
-                <span className="text-white font-semibold">Cloud Subscription</span>
-                <span className="text-dcure-cyan font-bold">₹199 - 499 / month</span>
-              </div>
-            </div>
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <div className="inline-block px-4 py-2 bg-electric/10 border border-electric/30 text-ice-blue text-sm font-bold tracking-wider mb-6 rounded-full uppercase">
+            Market Opportunity
           </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight leading-tight"
+          >
+            Addressing an Unmet <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#168BFF] to-[#D71920]">Global & Regional Demand</span>
+          </motion.h2>
         </div>
-      </section>
 
-      {/* Roadmap */}
-      <section id="roadmap" className="py-24 bg-transparent relative overflow-hidden">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold mb-6 text-white"
-            >
-              Future <span className="text-dcure-blue">Roadmap</span>
-            </motion.h2>
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-          <div className="relative max-w-5xl mx-auto">
-            {/* Horizontal Line */}
-            <div className="absolute top-1/2 left-0 w-full h-1 bg-dcure-navy -translate-y-1/2 hidden md:block"></div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              {[
-                { phase: "Phase 1", title: "Prototype & Testing", status: "completed" },
-                { phase: "Phase 2", title: "Pilot & User Feedback", status: "active" },
-                { phase: "Phase 3", title: "Manufacturing & Launch", status: "upcoming" },
-                { phase: "Phase 4", title: "AI & Sensor Expansion", status: "future" }
-              ].map((step, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.2 }}
-                  className="relative z-10 bg-dcure-navy p-6 rounded-2xl border border-dcure-blue/20 text-center"
-                >
-                  <div className={`w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-4 ${
-                    step.status === 'completed' ? 'bg-dcure-cyan text-dcure-dark' : 
-                    step.status === 'active' ? 'bg-dcure-blue text-white animate-pulse' : 
-                    'bg-dcure-dark text-gray-500 border border-gray-700'
-                  }`}>
-                    <Milestone size={20} />
-                  </div>
-                  <span className="text-xs font-bold text-dcure-cyan uppercase tracking-wider mb-2 block">{step.phase}</span>
-                  <h4 className="text-white font-bold">{step.title}</h4>
-                </motion.div>
-              ))}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-panel p-10 relative overflow-hidden hover:border-electric transition-colors group"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Globe size={100} />
             </div>
-          </div>
+            <div className="w-16 h-16 rounded-2xl bg-midnight border border-electric/30 shadow-[0_0_15px_rgba(22,139,255,0.2)] flex items-center justify-center mb-6 relative z-10">
+              <Globe size={32} className="text-[#168BFF]" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4 relative z-10">Target Scope</h3>
+            <p className="text-slate-text leading-relaxed font-medium relative z-10">
+              Addressing the rapidly growing demand across India and international eldercare markets.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="glass-panel p-10 relative overflow-hidden hover:border-accent-red/50 transition-colors group"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity text-accent-red">
+              <Users size={100} />
+            </div>
+            <div className="w-16 h-16 rounded-2xl bg-midnight border border-accent-red/30 shadow-[0_0_15px_rgba(215,25,32,0.2)] flex items-center justify-center mb-6 relative z-10">
+              <Users size={32} className="text-accent-red" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4 relative z-10">Ecosystem Scale</h3>
+            <p className="text-slate-text leading-relaxed font-medium relative z-10">
+              <span className="text-white font-bold">3.9M to 8.8M</span> individuals requiring proactive memory and dementia support in India.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="glass-panel p-10 relative overflow-hidden hover:border-electric transition-colors group"
+          >
+            <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Store size={100} />
+            </div>
+            <div className="w-16 h-16 rounded-2xl bg-midnight border border-electric/30 shadow-[0_0_15px_rgba(22,139,255,0.2)] flex items-center justify-center mb-6 relative z-10">
+              <Store size={32} className="text-[#168BFF]" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4 relative z-10">Market Channels</h3>
+            <ul className="space-y-3 relative z-10 text-slate-text font-medium">
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-electric mt-2 shrink-0"></div>
+                Direct-to-consumer family care
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-electric mt-2 shrink-0"></div>
+                Specialized memory clinics
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-electric mt-2 shrink-0"></div>
+                Assisted living facilities
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-electric mt-2 shrink-0"></div>
+                Eldercare insurance partners
+              </li>
+            </ul>
+          </motion.div>
+
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };

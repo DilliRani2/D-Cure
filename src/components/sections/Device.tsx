@@ -1,77 +1,91 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, BrainCircuit, Activity, Wifi } from 'lucide-react';
+import { Ear, BrainCircuit, Feather } from 'lucide-react';
 
 export const Device = () => {
+  const highlights = [
+    {
+      icon: <Ear size={24} className="text-[#168BFF]" />,
+      title: 'Discreet ear-level form factor',
+      desc: 'Ensures all-day dignity and compliance without drawing unwanted attention.'
+    },
+    {
+      icon: <BrainCircuit size={24} className="text-[#168BFF]" />,
+      title: 'Optimized placement',
+      desc: 'Positioned perfectly for high-fidelity brain (EEG) and vital signal acquisition.'
+    },
+    {
+      icon: <Feather size={24} className="text-[#168BFF]" />,
+      title: 'Featherweight, ergonomic contour',
+      desc: 'Designed meticulously to avoid patient irritation, even during extended wear.'
+    }
+  ];
+
   return (
-    <section id="device" className="py-24 bg-transparent relative">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          
+    <section id="device" className="py-12 bg-transparent relative">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10 xl:gap-12">
+
           {/* Visual Showcase */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/2 relative"
+            className="w-full lg:w-[45%] xl:w-[40%] relative flex flex-col items-center justify-center min-h-[400px]"
           >
-            <div className="absolute inset-0 bg-gradient-radial from-dcure-blue/20 to-transparent rounded-full blur-[80px]"></div>
-            <img 
-              src="/images/dcure-device-worn.png" 
-              alt="D-CURE Device" 
-              className="relative z-10 w-full max-w-md mx-auto object-contain filter drop-shadow-[0_0_40px_rgba(0,240,255,0.2)]"
-              onError={(e) => {
-                e.currentTarget.src = 'https://images.unsplash.com/photo-1572569432702-86103328e19b?q=80&w=600&auto=format&fit=crop';
+            <div className="absolute inset-0 bg-gradient-radial from-electric/20 to-transparent rounded-full blur-[80px]"></div>
+
+            <motion.div
+              className="relative z-10 w-full flex justify-center pb-8"
+              animate={{
+                rotate: [-3, 3, -3],
+                y: [-8, 8, -8]
               }}
-            />
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <img src="/images/device-external.png" alt="D-CURE Smart Ear Aid" className="max-w-[80%] h-auto drop-shadow-[0_0_30px_rgba(22,139,255,0.4)]" />
+            </motion.div>
+
+            {/* Elegant glowing stand */}
+            <div className="absolute bottom-[15%] w-[60%] h-[12px] bg-gradient-to-r from-transparent via-[#168BFF]/40 to-transparent blur-sm rounded-[100%] shadow-[0_10px_30px_rgba(22,139,255,0.6)]"></div>
+            <div className="absolute bottom-[15%] w-[40%] h-[4px] bg-gradient-to-r from-transparent via-white/40 to-transparent blur-sm rounded-[100%]"></div>
+
             {/* Hotspots */}
-            <div className="absolute top-[20%] right-[30%] w-3 h-3 bg-dcure-cyan rounded-full shadow-[0_0_15px_#00F0FF] animate-pulse"></div>
-            <div className="absolute bottom-[30%] left-[20%] w-3 h-3 bg-dcure-cyan rounded-full shadow-[0_0_15px_#00F0FF] animate-pulse"></div>
+            <div className="absolute top-[30%] right-[25%] w-3 h-3 bg-accent-red rounded-full shadow-[0_0_15px_#D71920] animate-pulse"></div>
+            <div className="absolute bottom-[40%] left-[25%] w-3 h-3 bg-accent-red rounded-full shadow-[0_0_15px_#D71920] animate-pulse"></div>
           </motion.div>
 
           {/* Details */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-1/2"
+            className="w-full lg:w-[55%] xl:w-[60%]"
           >
-            <div className="inline-block px-4 py-2 glass-card border-dcure-cyan/30 text-dcure-cyan text-sm font-semibold tracking-wider mb-6">
-              05 — THE DEVICE
+            <div className="inline-block px-4 py-2 bg-electric/10 border border-electric/30 text-ice-blue text-sm font-bold tracking-wider mb-6 uppercase rounded-full">
+              The Device
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-              Unobtrusive. <span className="text-dcure-cyan glow-text">Elegant.</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-white leading-tight">
+              Unobtrusive. <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#168BFF] to-[#D71920]">Elegant. Ergonomic.</span>
             </h2>
-            <p className="text-gray-400 text-lg mb-6 leading-relaxed font-semibold">
-              Elegant physical design.
-            </p>
-            <p className="text-gray-400 text-lg mb-12 leading-relaxed">
-              Ergonomic comfort. Engineered for comfort and built for safety. The D-CURE wearable provides continuous, unobtrusive monitoring to ensure peace of mind without compromising dignity.
-            </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                { icon: <Activity className="text-dcure-cyan" />, title: 'Advanced Sensors', desc: 'MAX30102 (HR/SpO2), ICM-42688 (IMU), & CXD5605 (GPS).' },
-                { icon: <BrainCircuit className="text-dcure-cyan" />, title: 'EEG Front-End', desc: 'ADS1299 for direct insight into brain activity & subtle shifts.' },
-                { icon: <Wifi className="text-dcure-cyan" />, title: 'Always Connected', desc: 'ESP32-S3 & SIM7080G (LTE-M/NB-IoT) for continuous sync.' },
-                { icon: <Shield className="text-dcure-red" />, title: 'Belt Concept', desc: 'Detachable safety belt tether to prevent accidental removal.' }
-              ].map((spec, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 glass-card border border-white/10 hover:border-dcure-cyan/30 transition-colors">
-                  <div className="w-12 h-12 rounded-xl bg-[#001540] flex items-center justify-center shrink-0 border border-white/5">
-                    {spec.icon}
+            <div className="space-y-6 mt-8">
+              {highlights.map((item, i) => (
+                <div key={i} className="flex items-start gap-4 p-5 glass-panel hover:border-electric transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-midnight border border-electric/30 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(22,139,255,0.2)]">
+                    {item.icon}
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">{spec.title}</h4>
-                    <p className="text-sm text-gray-400 font-medium">{spec.desc}</p>
+                    <h4 className="text-white font-bold mb-1">{item.title}</h4>
+                    <p className="text-sm text-slate-text leading-relaxed font-medium">{item.desc}</p>
                   </div>
                 </div>
               ))}
-            </div>
-            
-            <div className="mt-12">
-              <a href="#how-it-works" className="inline-flex items-center gap-2 text-dcure-cyan hover:text-white transition-colors font-bold uppercase tracking-wider text-sm border-b border-dcure-cyan hover:border-white pb-1">
-                See How It Works →
-              </a>
             </div>
           </motion.div>
 

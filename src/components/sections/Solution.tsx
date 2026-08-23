@@ -1,72 +1,65 @@
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Smartphone, Watch, Cloud, Zap } from 'lucide-react';
+import { Activity, Cpu, Cloud, HeartHandshake, AlertTriangle, User, MapPin, Heart, Shield, Smartphone, FileText, CheckCircle2 } from 'lucide-react';
 
 export const Solution = () => {
   return (
-    <section id="solution" className="py-24 bg-transparent relative overflow-hidden">
-      {/* Animated connecting lines background */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <motion.path 
-            d="M 100 200 C 300 200, 400 400, 800 300 S 1000 100, 1400 200" 
-            fill="transparent" 
-            stroke="#00F0FF" 
-            strokeWidth="2"
-            strokeDasharray="10 10"
-            animate={{ strokeDashoffset: [0, -100] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-          />
-        </svg>
-      </div>
+    <section id="solution" className="pt-12 scroll-mt-20 bg-[#06102b] relative overflow-hidden flex flex-col">
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-block px-4 py-2 glass-card border-white/20 text-dcure-cyan text-sm font-semibold tracking-wider mb-6">
-            04 — THE SOLUTION
-          </div>
-          <motion.h2 
+      <div className="container mx-auto px-4 md:px-8 xl:px-12 relative z-10 pb-16">
+
+        {/* Top Header Row */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 xl:gap-12 relative z-20">
+          {/* Left Content */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-6 text-white"
+            className="w-full lg:w-[55%] xl:w-[60%]"
           >
-            The Proactive Shift: <span className="text-dcure-cyan glow-text">Ear-Worn Contextual Intelligence</span>
-          </motion.h2>
-          <p className="text-gray-400 text-lg leading-relaxed">
-            Moving beyond reactive tracking to an intelligent, predictive wearable system that understands the patient's context.
-          </p>
-        </div>
+            <div className="inline-block px-4 py-1.5 border border-white/20 rounded-full mb-6 mt-4">
+              <span className="text-xs md:text-sm font-bold tracking-widest uppercase text-white">OUR SOLUTION</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-white tracking-tight leading-tight">
+              The Proactive Shift: <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-[#D71920]">Ear-Worn Contextual Intelligence</span>
+            </h2>
+            <p className="text-gray-300 text-lg md:text-xl font-medium leading-relaxed mt-6">
+              D-CURE transforms dementia care from reactive tracking into a proactive, multimodal caregiver-alert ecosystem.
+            </p>
 
-        <div className="relative max-w-5xl mx-auto">
-          {/* Central Hub */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-dcure-blue/20 rounded-full blur-[40px] animate-pulse"></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: <Watch size={40} />, title: "D-CURE Wearable", desc: "Advanced sensors for continuous vitals, location, and motion tracking." },
-              { icon: <Smartphone size={40} />, title: "Mobile Apps", desc: "Tailored interfaces for Patients, Families, and Professional Caregivers." },
-              { icon: <Zap size={40} />, title: "AI Intelligence", desc: "Predictive pattern analysis to preempt emergencies and support routines." },
-              { icon: <Cloud size={40} />, title: "Secure Cloud Platform", desc: "HIPAA-compliant data processing and seamless coordination." }
-            ].map((feature, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="glass-card p-8 text-center flex flex-col items-center group relative overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="w-20 h-20 rounded-full bg-[#001540] border border-white/10 flex items-center justify-center text-dcure-cyan mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(31,81,255,0.2)]">
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-sm text-gray-400">{feature.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+            <div className="mt-8 pt-6">
+              <div className="flex flex-wrap lg:flex-nowrap items-center gap-1.5 lg:gap-2 text-[#168BFF] font-semibold text-xs lg:text-[13px] xl:text-sm whitespace-nowrap">
+                <span className="bg-[#168BFF]/10 px-2 lg:px-3 py-1.5 rounded-lg border border-[#168BFF]/20 shadow-sm">Wearable Sensors</span>
+                <span className="text-white/40">→</span>
+                <span className="bg-[#168BFF]/10 px-2 lg:px-3 py-1.5 rounded-lg border border-[#168BFF]/20 shadow-sm">Edge AI</span>
+                <span className="text-white/40">→</span>
+                <span className="bg-[#168BFF]/10 px-2 lg:px-3 py-1.5 rounded-lg border border-[#168BFF]/20 shadow-sm">Multimodal Cloud</span>
+                <span className="text-white/40">→</span>
+                <span className="bg-gradient-to-r from-[#D71920]/90 to-[#C53535]/90 px-2 lg:px-3 py-1.5 rounded-lg border border-[#D71920]/50 text-white shadow-md">Actionable Caregiver Guidance</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-[45%] xl:w-[40%] relative flex justify-center"
+          >
+            <div className="relative rounded-2xl overflow-hidden bg-white/5 p-2 shadow-2xl border border-white/10 backdrop-blur-sm">
+              <img
+                src="/images/pipeline-diagram-new.png"
+                alt="Contextual Intelligence Pipeline"
+                className="w-full max-w-[600px] object-contain rounded-xl shadow-inner bg-white"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
+
+
     </section>
   );
 };

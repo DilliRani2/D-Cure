@@ -1,111 +1,65 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Heart, Users as UsersAlt } from 'lucide-react';
+import { Network, Fingerprint, Headset } from 'lucide-react';
 
 export const WhyChoose = () => {
+  const differentiators = [
+    {
+      icon: <Network size={32} className="text-[#168BFF]" />,
+      title: 'Multimodal Fusion',
+      desc: 'Integrates brain, cardiac, and gait signals instead of relying solely on location.'
+    },
+    {
+      icon: <Fingerprint size={32} className="text-[#168BFF]" />,
+      title: 'Personalized Baseline',
+      desc: 'Adapts to individual patient norms rather than fixed generic thresholds.'
+    },
+    {
+      icon: <Headset size={32} className="text-[#168BFF]" />,
+      title: 'Two-Way Intervention',
+      desc: 'Combines discreet patient audio guidance with instant caregiver escalation.'
+    }
+  ];
+
   return (
-    <section className="py-24 bg-[#f8fafc]">
-      <div className="container mx-auto px-6 md:px-12">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-[32px] font-extrabold text-dcure-navy tracking-wide uppercase">
-            WHY CHOOSE D-CURE?
-          </h2>
-          <div className="w-16 h-1 bg-dcure-red mx-auto mt-4 rounded-full"></div>
-        </motion.div>
+    <section id="why-dcure" className="py-24 relative overflow-hidden bg-transparent">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 max-w-6xl mx-auto">
-          {/* For Patients */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <div className="inline-block px-4 py-2 bg-electric/10 border border-electric/30 text-ice-blue text-sm font-bold tracking-wider mb-6 rounded-full uppercase">
+            Why D-CURE is Different
+          </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.5 }}
+            className="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight leading-tight"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-full bg-dcure-navy flex items-center justify-center text-white shrink-0 shadow-md">
-                <Users size={22} />
-              </div>
-              <h3 className="text-[17px] font-bold text-dcure-navy tracking-wide uppercase">FOR PATIENTS</h3>
-            </div>
-            <ul className="space-y-3 text-[15px] font-medium text-dcure-text">
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Enhanced safety and security.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Promotes independence.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Reduced anxiety and disorientation.</span>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* For Caregivers */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-full bg-dcure-red flex items-center justify-center text-white shrink-0 shadow-md">
-                <Heart size={22} />
-              </div>
-              <h3 className="text-[17px] font-bold text-dcure-navy tracking-wide uppercase">FOR CAREGIVERS</h3>
-            </div>
-            <ul className="space-y-3 text-[15px] font-medium text-dcure-text">
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Real-time remote monitoring.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Reduced stress and burnout.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Improved communication with care team.</span>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* For Families */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-full bg-dcure-navy flex items-center justify-center text-white shrink-0 shadow-md">
-                <UsersAlt size={22} />
-              </div>
-              <h3 className="text-[17px] font-bold text-dcure-navy tracking-wide uppercase">FOR FAMILIES</h3>
-            </div>
-            <ul className="space-y-3 text-[15px] font-medium text-dcure-text">
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Greater peace of mind.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Facilitates quality family time.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-dcure-navy mt-1.5 text-xs">•</span> 
-                <span>Supports a connected care network.</span>
-              </li>
-            </ul>
-          </motion.div>
+            Our Unfair <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#168BFF] to-[#D71920]">Advantage</span>
+          </motion.h2>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {differentiators.map((diff, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.15 }}
+              className="glass-panel p-10 flex flex-col items-center text-center group hover:border-electric transition-all"
+            >
+              <div className="w-20 h-20 rounded-full bg-midnight shadow-[0_0_20px_rgba(22,139,255,0.2)] border border-electric/30 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                {diff.icon}
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">{diff.title}</h3>
+              <p className="text-slate-text leading-relaxed font-medium">
+                {diff.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

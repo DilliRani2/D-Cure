@@ -11,9 +11,17 @@ export const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-br from-white via-[#f8fafc] to-[#e2e8f0]">
+    <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20 bg-transparent">
+      {/* Full Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img
+          src="/images/grand mother.png"
+          alt="Hero Background"
+          className="w-full h-50% object-cover object-[5%_center]"
+        />
+      </div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 relative z-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
           {/* Content */}
@@ -21,73 +29,28 @@ export const Hero = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full lg:w-1/2 space-y-6"
-          >
+            className="w-full lg:w-[55%] space-y-6 pt-16 lg:pt-24 pb-20">
 
-            <h1 className="text-3xl md:text-4xl lg:text-[42px] font-extrabold leading-tight text-dcure-navy uppercase tracking-tight">
-              Empowering Independence. <br />
-              <span className="text-dcure-navy">Ensuring Safety.</span>
+            <h1 className="text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-extrabold leading-tight text-white tracking-tight whitespace-nowrap">
+              D CURE <span className="text-[#770e11ff]">SMART EAR AID.</span>
             </h1>
 
-            <h2 className="text-lg md:text-xl text-dcure-navy font-semibold mt-2">
-              Understands their needs before an emergency happens.
+            <h2 className="text-xl md:text-2xl text-white font-semibold mt-4">
+              Proactive Dementia Care — Understand the patient before the emergency happens.
             </h2>
 
-            <p className="text-sm md:text-base text-dcure-navy max-w-xl leading-relaxed">
-              More than just a tracker, D-CURE is a comfortable, ear-worn device that learns personal patterns to predict and prevent wandering. It gives patients their dignity, and families their peace of mind.
+            <p className="text-base md:text-lg text-white/90 max-w-xl leading-relaxed">
+              An AI-powered multimodal wearable designed for proactive dementia safety, continuous vital monitoring, early risk prediction, and context-aware caregiver support.
             </p>
 
-            <p className="text-xs text-dcure-navy max-w-xl leading-relaxed font-medium italic">
-              Sense Wise. Save lives.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mt-8">
-              <button className="px-8 py-3.5 bg-dcure-red text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:bg-red-800 transition-all hover:-translate-y-0.5">
-                Explore D-CURE
-              </button>
-              <button className="px-8 py-3.5 bg-white border-2 border-dcure-navy text-dcure-navy font-bold rounded-lg shadow-sm hover:bg-gray-50 transition-all hover:-translate-y-0.5">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <a href="#demo" className="bg-[#D71920] text-white font-bold px-8 py-3.5 rounded-full shadow-[0_0_20px_rgba(215,25,32,0.4)] flex justify-center items-center gap-2 transition-all hover:shadow-[0_0_25px_rgba(215,25,32,0.6)] hover:-translate-y-0.5">
+                Explore Platform
+              </a>
+              <a href="#solution" className="glass-panel text-white font-bold px-8 py-3.5 rounded-full flex justify-center items-center gap-2 transition-all hover:border-electric">
                 See How It Works
-              </button>
+              </a>
             </div>
-
-            {/* Benefits */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-12 border-t border-gray-200">
-              {benefits.map((benefit, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + (idx * 0.1) }}
-                  className="flex flex-col space-y-2 items-start"
-                >
-                  <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center border border-gray-100">
-                    {benefit.icon}
-                  </div>
-                  <div>
-                    <span className="block text-[11px] font-extrabold text-dcure-navy uppercase tracking-wider">{benefit.title}</span>
-                    <span className="block text-[11px] font-medium text-dcure-navy leading-tight mt-0.5">{benefit.text}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="hidden lg:block absolute right-0 top-0 bottom-0 w-[58%]"
-          >
-            <img
-              src="/images/woman-bench.jpg"
-              alt="Grandmother wearing D-CURE"
-              className="w-full h-full object-cover object-[15%_center]"
-              style={{
-                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%)',
-                maskImage: 'linear-gradient(to right, transparent 0%, black 25%)'
-              }}
-            />
           </motion.div>
 
         </div>
