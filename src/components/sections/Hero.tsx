@@ -16,7 +16,7 @@ export const Hero = () => {
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img
           src="/images/grand mother.png"
-          alt="Hero Background"
+          alt="Elderly patient wearing D-CURE smart ear aid"
           className="w-full h-50% object-cover object-[5%_center]"
         />
       </div>
