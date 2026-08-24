@@ -17,8 +17,10 @@ export const Hero = () => {
         <img
           src="/images/grand mother.png"
           alt="Elderly patient wearing D-CURE smart ear aid"
-          className="w-full h-50% object-cover object-[5%_center]"
+          className="w-full h-full object-cover object-center md:object-[5%_center]"
         />
+        {/* Added a subtle gradient overlay to ensure text remains readable on mobile */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c2a5e]/80 via-transparent to-transparent md:bg-none"></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-20">
@@ -31,15 +33,15 @@ export const Hero = () => {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-[55%] space-y-6 pt-16 lg:pt-24 pb-20">
 
-            <h1 className="text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-extrabold leading-tight text-white tracking-tight whitespace-nowrap">
-              D CURE <span className="text-[#770e11ff]">SMART EAR AID.</span>
+            <h1 className="text-4xl md:text-4xl lg:text-[44px] xl:text-[50px] font-extrabold leading-tight text-white tracking-tight flex flex-wrap gap-x-3">
+              <span>D CURE</span> <span className="text-[#770e11ff]">SMART EAR AID.</span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl text-white font-semibold mt-4">
+            <h2 className="text-xl md:text-2xl text-white font-semibold mt-4 drop-shadow-md md:drop-shadow-none">
               Proactive Dementia Care — Understand the patient before the emergency happens.
             </h2>
 
-            <p className="text-base md:text-lg text-white/90 max-w-xl leading-relaxed">
+            <p className="text-base md:text-lg text-white/90 max-w-xl leading-relaxed drop-shadow-md md:drop-shadow-none">
               An AI-powered multimodal wearable designed for proactive dementia safety, continuous vital monitoring, early risk prediction, and context-aware caregiver support.
             </p>
 
